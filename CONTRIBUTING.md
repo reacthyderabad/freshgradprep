@@ -8,12 +8,14 @@ This project is built through **React Hyderabad Forge**, where contributors coll
 
 # Getting Started
 
-1. Fork the repository
+1. Fork the repository and copy both the branches.
+
 2. Clone your fork
 
 > git clone https://github.com/yourusername/freshgradprep.git
 
 3. Create a new branch
+**Create a new branch only from the `dev` branch.**
 
 > git checkout -b feature/your-feature-name
 

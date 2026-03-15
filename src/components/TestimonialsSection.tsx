@@ -61,7 +61,7 @@ const TestimonialsSection = () => {
 
       <Box
         sx={{
-          maxWidth: 820,
+          maxWidth: 1000,
           mx: 'auto',
           p: { xs: 4, md: 6 },
           borderRadius: 1,
@@ -84,19 +84,18 @@ const TestimonialsSection = () => {
           sx={{
             color: 'text.secondary',
             mb: 4,
-            fontStyle: 'italic',
+            fontStyle: 'system-ui',
           }}
         >
           {activeTestimonial.content.map((paragraph, i) => (
-            <Typography
-              key={i}
-              variant="body1"
-              sx={{ mb: 2 }}
-            >
-              {i === 0 ? `"${paragraph}` : paragraph}
-              {i === activeTestimonial.content.length - 1 ? `"` : ''}
-            </Typography>
-          ))}
+  <Typography
+    key={i}
+    variant="body1"
+    sx={{ mb: 2 }}
+  >
+    {paragraph}
+  </Typography>
+))}
         </Box>
 
         <Typography

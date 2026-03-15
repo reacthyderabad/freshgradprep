@@ -6,20 +6,21 @@ const HeroSection = () => {
   return (
     <Box
       sx={{
-        px: 24,
-        py: 10,
+        px: { xs: 3, md: 24 },
+        py: { xs: 6, md: 10 },
         display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' },
         alignItems: 'center',
         justifyContent: 'space-between',
-        gap: 6
+        gap: { xs: 5, md: 6 }
       }}
     >
       {/* LEFT CONTENT */}
-      <Box sx={{ maxWidth: 600 }}>
+      <Box sx={{ maxWidth: { xs: '100%', md: 600 } }}>
         <Typography
           variant="h3"
           sx={{
-            fontSize: '3rem',
+            fontSize: { xs: '2.2rem', md: '3rem' },
             fontWeight: 700,
             color: 'primary.main',
             mb: 3
@@ -31,7 +32,7 @@ const HeroSection = () => {
         <Typography
           variant="body1"
           sx={{
-            fontSize: '1.1rem',
+            fontSize: { xs: '1rem', md: '1.1rem' },
             fontWeight: 400,
             color: 'text.secondary',
             mb: 2
@@ -44,17 +45,27 @@ const HeroSection = () => {
 
         <Typography
           variant="body2"
-          sx={{ color: 'accent.main',fontWeight: 600,fontSize: '0.8rem', mb: 4 }}
+          sx={{
+            color: 'accent.main',
+            fontWeight: 600,
+            fontSize: '0.8rem',
+            mb: 4
+          }}
         >
           Built on real HR insight and 9 years of hiring experience.
         </Typography>
 
         {/* Buttons */}
-        <Stack direction="row" spacing={2} sx={{ mb: 4 }}>
+        <Stack
+          direction={{ xs: 'column', md: 'row' }}
+          spacing={2}
+          sx={{ mb: 4 }}
+        >
           <Button
             variant="contained"
             color="highlight"
             sx={{
+              width: { xs: '100%', md: 'auto' },
               '&:hover': {
                 color: '#646cff',
                 backgroundColor: 'highlight.main'
@@ -71,6 +82,11 @@ const HeroSection = () => {
             variant="outlined"
             color="primary"
             sx={{
+              width: { xs: '100%', md: 'auto' },
+              borderWidth: '2px',
+              '&:hover': {
+                borderWidth: '2px'
+              },
               '&:focus': {
                 outline: 'none'
               }
@@ -81,7 +97,12 @@ const HeroSection = () => {
         </Stack>
 
         {/* Tags */}
-        <Stack direction="row" spacing={1}>
+        <Stack
+          direction="row"
+          spacing={1}
+          flexWrap="wrap"
+          useFlexGap
+        >
           <Chip
             label="Real HR Insight"
             variant="outlined"
@@ -122,18 +143,20 @@ const HeroSection = () => {
 
       {/* RIGHT IMAGE PLACEHOLDER */}
       <Box
-  sx={{
-    width: 450,
-    height: 300,
-    borderRadius: 4,
-    background: 'linear-gradient(to bottom right, #e8e3cc, #fffffff0)',
-    border: '2px dashed black',
-    borderColor: 'text.secondary',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }}
->
+        sx={{
+          width: { xs: '100%', md: 450 },
+          height: { xs: 220, md: 300 },
+          flexShrink: 0,
+          order: { xs: 2, md: 0 },
+          borderRadius: 4,
+          background: 'linear-gradient(to bottom right, #e8e3cc, #fffffff0)',
+          border: '2px dashed black',
+          borderColor: 'text.secondary',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
         <Typography variant="body2" color="text.secondary">
           Founder image, brand visual, or illustration
         </Typography>
@@ -143,3 +166,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

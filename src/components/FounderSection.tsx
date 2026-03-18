@@ -1,143 +1,116 @@
-// 1. Imports
-import { Box, Typography, Container } from '@mui/material';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import {
+  Box,
+  Typography,
+  Container,
+  Stack,
+  IconButton,
+} from '@mui/material';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import { founderContent } from '../data/founderContent';
+import bhargaviPic from '../assets/BhargaviPic.png';
 
-// 2. Interfaces
-interface FounderSectionProps {}
-
-// 3. Component
-const FounderSection = ({}: FounderSectionProps) => {
+const FounderSection = () => {
   return (
     <Box
       component="section"
+      id="founder"
+      aria-label="About the founder"
       sx={{
-        py: 10,
-        backgroundColor: '#F5F1E8',
+        py: { xs: 8, md: 10 },
+        backgroundColor: 'secondary.main',
       }}
     >
-      <Container maxWidth="lg">
-        {/* Title */}
+      <Container>
         <Typography
-          variant="h4"
-          align="center"
+          variant="h2"
           sx={{
-            fontWeight: 700,
-            mb: 8,
-            color: '#1E3A8A',
+            textAlign: 'center',
+            color: 'primary.main',
+            mb: 6,
+            fontSize: { xs: '1.75rem', md: '2.25rem' },
           }}
         >
           {founderContent.title}
         </Typography>
 
-        {/* Layout */}
         <Box
           sx={{
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
-            gap: 8,
+            gap: { xs: 4, md: 6 },
             alignItems: 'center',
           }}
         >
-          {/* LEFT - Image */}
-          <Box
-            sx={{
-              flex: '0 0 320px',
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-          >
+          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
             <Box
+              component="img"
+              src={bhargaviPic}
+              alt={founderContent.name}
               sx={{
-                width: 280,
-                height: 280,
+                width: { xs: 200, md: 280 },
+                height: { xs: 200, md: 280 },
                 borderRadius: '50%',
-                border: '4px solid #D9A441',
-                backgroundColor: '#E5E7EB',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                border: '4px solid',
+                borderColor: 'accent.main',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
+                objectFit: 'cover',
+                objectPosition: 'top',
               }}
-            >
-              <Typography variant="body2" color="text.secondary">
-                Founder photo
-              </Typography>
-            </Box>
+            />
+
+            <Stack direction="row" spacing={1} sx={{ mt: 2 }}>
+              {founderContent.linkedin && (
+                <IconButton
+                  component="a"
+                  href={founderContent.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  sx={{ color: 'accent.main', '&:hover': { color: 'accent.dark' } }}
+                >
+                  <LinkedInIcon />
+                </IconButton>
+              )}
+              {founderContent.instagram && (
+                <IconButton
+                  component="a"
+                  href={founderContent.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  sx={{ color: 'accent.main', '&:hover': { color: 'accent.dark' } }}
+                >
+                  <InstagramIcon />
+                </IconButton>
+              )}
+            </Stack>
           </Box>
 
-          {/* RIGHT - Content */}
+          {/* Bio content */}
           <Box sx={{ flex: 1 }}>
-            {/* Name */}
             <Typography
-              variant="h5"
-              sx={{
-                fontWeight: 700,
-                color: '#1E3A8A',
-                mb: 1,
-              }}
+              variant="h3"
+              sx={{ color: 'primary.main', mb: 0.5, fontSize: { xs: '1.5rem', md: '1.75rem' } }}
             >
               {founderContent.name}
             </Typography>
-
-            {/* Role */}
             <Typography
-              variant="body2"
-              sx={{
-                color: '#D9A441',
-                mb: 3,
-                fontWeight: 500,
-              }}
+              variant="subtitle2"
+              sx={{ color: 'accent.main', fontWeight: 600, mb: 3 }}
             >
               {founderContent.role}
             </Typography>
 
-            {/* Paragraphs */}
-            {founderContent.bio.map((para, index) => (
+            {founderContent.bio.map((paragraph, idx) => (
               <Typography
-                key={index}
-                variant="body2"
-                sx={{
-                  mb: 2,
-                  color: 'text.secondary',
-                  lineHeight: 1.8,
-                }}
+                key={idx}
+                variant="body1"
+                sx={{ color: 'text.secondary', mb: 2 }}
               >
-                {para}
+                {paragraph}
               </Typography>
             ))}
-
-            {/* Bullet Points */}
-            <Box sx={{ mt: 3 }}>
-              {[
-                '9 years of hiring experience',
-                'Practical, recruiter-backed perspective',
-                'Focused on strategic positioning',
-                'Helping people find career clarity',
-              ].map((item) => (
-                <Box
-                  key={item}
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    mb: 1.5,
-                    gap: 1,
-                  }}
-                >
-                  <CheckCircleIcon
-                    sx={{
-                      color: '#D9A441',
-                      fontSize: 18,
-                    }}
-                  />
-                  <Typography
-                    variant="body2"
-                    sx={{ color: '#1E3A8A', fontWeight: 500 }}
-                  >
-                    {item}
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
           </Box>
         </Box>
       </Container>
@@ -145,5 +118,4 @@ const FounderSection = ({}: FounderSectionProps) => {
   );
 };
 
-// 4. Export
 export default FounderSection;

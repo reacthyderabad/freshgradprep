@@ -1,169 +1,143 @@
-// Imports
-import { Box, Typography, Button, Stack, Chip } from '@mui/material';
+import {
+  Box,
+  Typography,
+  Button,
+  Chip,
+  Container,
+  Stack,
+} from '@mui/material';
+import { heroContent } from '../data/heroContent';
+import heroImage from '../assets/560.jpg';
 
-// Component
 const HeroSection = () => {
   return (
     <Box
+      component="section"
+      id="hero"
+      aria-label="Hero"
       sx={{
-        px: { xs: 3, md: 24 },
-        py: { xs: 6, md: 10 },
-        display: 'flex',
-        flexDirection: { xs: 'column', md: 'row' },
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: { xs: 5, md: 6 }
+        py: { xs: 8, md: 12 },
+        backgroundColor: 'background.default',
       }}
     >
-      {/* LEFT CONTENT */}
-      <Box sx={{ maxWidth: { xs: '100%', md: 600 } }}>
-        <Typography
-          variant="h3"
+      <Container>
+        <Box
           sx={{
-            fontSize: { xs: '2.2rem', md: '3rem' },
-            fontWeight: 700,
-            color: 'primary.main',
-            mb: 3
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
+            alignItems: 'center',
+            gap: { xs: 6, md: 8 },
           }}
         >
-          Career Clarity Built on Real Hiring Experience
-        </Typography>
+          {/* Left content */}
+          <Box sx={{ flex: 1, maxWidth: { md: '58%' } }}>
+            <Typography
+              variant="h1"
+              sx={{
+                color: 'primary.main',
+                mb: 3,
+                fontSize: { xs: '2.2rem', sm: '2.75rem', md: '3.25rem' },
+              }}
+            >
+              {heroContent.headline}
+            </Typography>
 
-        <Typography
-          variant="body1"
-          sx={{
-            fontSize: { xs: '1rem', md: '1.1rem' },
-            fontWeight: 400,
-            color: 'text.secondary',
-            mb: 2
-          }}
-        >
-          FreshGradPrep helps students, fresh graduates, and professionals
-          understand how recruitment actually works — so they can position
-          themselves strategically in today's job market.
-        </Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                color: 'text.secondary',
+                mb: 2,
+                maxWidth: 560,
+                fontSize: { xs: '1rem', sm: '1.1rem' },
+              }}
+            >
+              {heroContent.subheadline}
+            </Typography>
 
-        <Typography
-          variant="body2"
-          sx={{
-            color: 'accent.main',
-            fontWeight: 600,
-            fontSize: '0.8rem',
-            mb: 4
-          }}
-        >
-          Built on real HR insight and 9 years of hiring experience.
-        </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                color: 'accent.main',
+                fontWeight: 600,
+                mb: 4,
+              }}
+            >
+              {heroContent.trustLine}
+            </Typography>
 
-        {/* Buttons */}
-        <Stack
-          direction={{ xs: 'column', md: 'row' }}
-          spacing={2}
-          sx={{ mb: 4 }}
-        >
-          <Button
-            variant="contained"
-            color="highlight"
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mb: 4 }}>
+              <Button
+                variant="contained"
+                size="large"
+                href={heroContent.primaryCta.href}
+                sx={{
+                  backgroundColor: 'highlight.main',
+                  '&:hover': { backgroundColor: 'highlight.dark', opacity: 0.9 },
+                }}
+              >
+                {heroContent.primaryCta.label}
+              </Button>
+              <Button
+                variant="outlined"
+                size="large"
+                href={heroContent.secondaryCta.href}
+                sx={{
+                  borderColor: 'primary.main',
+                  color: 'primary.main',
+                  '&:hover': {
+                    borderColor: 'primary.dark',
+                    backgroundColor: 'rgba(4,58,126,0.04)',
+                  },
+                }}
+              >
+                {heroContent.secondaryCta.label}
+              </Button>
+            </Stack>
+
+            <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+              {heroContent.trustChips.map((chip) => (
+                <Chip
+                  key={chip}
+                  label={chip}
+                  size="small"
+                  sx={{
+                    backgroundColor: 'secondary.main',
+                    color: 'primary.main',
+                    fontWeight: 600,
+                    fontSize: '0.8rem',
+                  }}
+                />
+              ))}
+            </Stack>
+          </Box>
+
+          {/* Right visual placeholder */}
+          <Box
             sx={{
-              width: { xs: '100%', md: 'auto' },
-              '&:hover': {
-                color: '#646cff',
-                backgroundColor: 'highlight.main'
-              },
-              '&:focus': {
-                outline: 'none'
-              }
+              flex: 1,
+              maxWidth: { xs: '100%', md: '42%' },
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
           >
-            Book a Career Session
-          </Button>
-
-          <Button
-            variant="outlined"
-            color="primary"
-            sx={{
-              width: { xs: '100%', md: 'auto' },
-              borderWidth: '2px',
-              '&:hover': {
-                borderWidth: '2px'
-              },
-              '&:focus': {
-                outline: 'none'
-              }
-            }}
-          >
-            Explore Services
-          </Button>
-        </Stack>
-
-        {/* Tags */}
-        <Stack
-          direction="row"
-          spacing={1}
-          flexWrap="wrap"
-          useFlexGap
-        >
-          <Chip
-            label="Real HR Insight"
-            variant="outlined"
-            sx={{
-              fontWeight: 550,
-              fontSize: '0.7rem',
-              color: 'primary.main',
-              backgroundColor: 'secondary.main',
-              borderColor: 'secondary.main'
-            }}
-          />
-
-          <Chip
-            label="Practical Guidance"
-            variant="outlined"
-            sx={{
-              fontWeight: 550,
-              fontSize: '0.7rem',
-              color: 'primary.main',
-              backgroundColor: 'secondary.main',
-              borderColor: 'secondary.main'
-            }}
-          />
-
-          <Chip
-            label="Structured Clarity"
-            variant="outlined"
-            sx={{
-              fontWeight: 550,
-              fontSize: '0.7rem',
-              color: 'primary.main',
-              backgroundColor: 'secondary.main',
-              borderColor: 'secondary.main'
-            }}
-          />
-        </Stack>
-      </Box>
-
-      {/* RIGHT IMAGE PLACEHOLDER */}
-      <Box
-        sx={{
-          width: { xs: '100%', md: 450 },
-          height: { xs: 220, md: 300 },
-          flexShrink: 0,
-          order: { xs: 2, md: 0 },
-          borderRadius: 4,
-          background: 'linear-gradient(to bottom right, #e8e3cc, #fffffff0)',
-          border: '2px dashed black',
-          borderColor: 'text.secondary',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
-        <Typography variant="body2" color="text.secondary">
-          Founder image, brand visual, or illustration
-        </Typography>
-      </Box>
+            <Box
+              component="img"
+              src={heroImage}
+              alt="Career guidance illustration"
+              sx={{
+                width: '100%',
+                maxWidth: 420,
+                aspectRatio: '4 / 3',
+                borderRadius: 4,
+                objectFit: 'cover',
+              }}
+            />
+          </Box>
+        </Box>
+      </Container>
     </Box>
   );
 };
 
 export default HeroSection;
-

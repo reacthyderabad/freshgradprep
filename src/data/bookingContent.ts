@@ -8,8 +8,8 @@ export const bookingContent = {
   },
   secondaryCta: {
     label: 'Chat on WhatsApp',
-    href: 'https://wa.me/919876543210',
+    href: 'https://wa.me/+919030152699',
   },
   calendlyPlaceholder: 'https://calendly.com/freshgradprep',
-  whatsappNumber: '+91 98765 43210',
+  whatsappNumber: '+919030152699',
 };

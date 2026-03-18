@@ -5,7 +5,7 @@ import { aboutContent } from "../data/aboutContent";
 
 const AboutSection = () => {
   return (
-    <Box sx={{ py: 8, backgroundColor: "#fff" }}>
+    <Box id="about" sx={{ py: 8, backgroundColor: "#fff" }}>
       <Container maxWidth="lg">
 
         <Grid container spacing={6}>

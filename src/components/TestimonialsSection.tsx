@@ -46,6 +46,7 @@ const TestimonialsSection = () => {
 
   return (
     <Box
+      id="testimonials"
       sx={{
         py: { xs: 8, md: 12 },
         px: { xs: 2, md: 6 },

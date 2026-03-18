@@ -16,9 +16,11 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { communityPartnersContent } from '../data/communityPartnersContent';
 import reactHydLogo from '../assets/ReactHydLandscapeLogo.jpg';
+import juicerTechLogo from '../assets/JuicerTechnologyLogo.jpg';
 
 const logoMap: Record<string, string> = {
   'ReactHydLandscapeLogo.jpg': reactHydLogo,
+  'JuicerTechnologyLogo.jpg': juicerTechLogo,
 };
 
 const socialIcons = [

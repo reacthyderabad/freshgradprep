@@ -22,7 +22,7 @@ interface CommunityPartnersContent {
 export const communityPartnersContent: CommunityPartnersContent = {
   title: 'Community Partners',
   description:
-    'The amazing communities who help us spread the love for React.',
+    'The amazing communities who support us in our journey',
   partners: [
     {
       name: 'React Hyderabad',
@@ -36,13 +36,12 @@ export const communityPartnersContent: CommunityPartnersContent = {
       },
     },
     {
-      name: 'Sample Community',
-      logoPath: '',
+      name: 'Juicer Technology',
+      logoPath: 'JuicerTechnologyLogo.jpg',
       socials: {
-        website: 'https://example.com',
-        linkedin: 'https://www.linkedin.com/company/example/',
-        x: 'https://x.com/example',
-        youtube: 'https://www.youtube.com/@example',
+        linkedin: 'https://www.linkedin.com/company/juicer-technology/',
+        x: 'https://x.com/0xJuicerTech',
+        instagram: 'https://www.instagram.com/juicer_technology',
       },
     },
   ],

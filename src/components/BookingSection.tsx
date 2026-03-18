@@ -11,6 +11,7 @@ const BookingSection = () => {
 
   return (
     <Box
+      id="booking"
       sx={{
         backgroundColor: "primary.main",
         py: { xs: 6, md: 10 },
@@ -93,7 +94,7 @@ const BookingSection = () => {
         {/* Email Button */}
         <Button
           variant="outlined"
-          href="mailto:example@gmail.com"
+          href="mailto:freshgradprep@gmail.com"
           startIcon={<EmailIcon />}
           sx={{
             borderColor: "white",

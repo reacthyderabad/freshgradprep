@@ -8,14 +8,14 @@ export const footerContent = {
     { label: 'Book Session', href: '#booking' },
   ],
   serviceLinks: [
-    { label: 'Resume Revamp Express', href: '#services' },
-    { label: 'LinkedIn Visibility Boost', href: '#services' },
     { label: 'Career Strategy Deep Dive', href: '#services' },
     { label: 'Placement Accelerator', href: '#services' },
+    { label: 'Resume Revamp Express', href: '#services' },
+    { label: 'LinkedIn Visibility Boost', href: '#services' },
   ],
   founder: 'Bhargavi M.',
-  contactEmail: 'hello@freshgradprep.com',
-  contactWhatsApp: '+91 98765 43210',
+  contactEmail: 'freshgradprep@gmail.com',
+  contactWhatsApp: '+91 90301 52699',
   copyright: `© ${new Date().getFullYear()} FreshGradPrep. All rights reserved.`,
   madeWithLove: 'Made with <3 in India by the React Hyderabad community',
   communityLink: {

@@ -3,14 +3,12 @@ export const founderContent = {
   title: 'Meet the Founder',
   role: 'Founder, FreshGradPrep',
   bio: [
-    'With 9 years of hands-on hiring experience across industries, Bhargavi M. has seen firsthand what makes candidates stand out — and what causes them to be overlooked.',
-    'FreshGradPrep was born from a simple observation: most career advice available today is generic, recycled, and disconnected from how recruiters actually think. Bhargavi built this platform to bridge that gap — offering practical, recruiter-backed career guidance that helps people position themselves strategically.',
-    'Her approach is grounded in real experience, not theory. Every session, review, and program is designed to give you the clarity and confidence to navigate the job market on your own terms.',
+    'Bhargavi M is an HR professional with over 8 years of experience across various HR functions. She has reviewed thousands of resumes and LinkedIn profiles and understands how recruiters shortlist and assess candidates.ˀ',
+    'Fresh GradPrep was born from her own early career experience, when she was misled by job scams and realized how many fresh graduates lack proper guidance while entering the job market.',
+    'Through Fresh GradPrep, she has guided 1500+ students and job seekers in improving their resumes, understanding hiring processes, and applying for jobs strategically. She is also a public speaker and LinkedIn content creator, sharing practical insights on careers and hiring.',
+    'She was honored with the Siddharth Path Award (2026) at an HR Conclave in recognition of her contributions to HR, career development, and student guidance.',
+    'Her focus is simple: helping fresh graduates understand how hiring works and position themselves better in the job market.',
   ],
-  highlights: [
-    '9 years of hiring experience',
-    'Practical, recruiter-backed perspective',
-    'Focused on strategic positioning',
-    'Helping people find career clarity',
-  ],
+  linkedin: 'https://www.linkedin.com/in/bhargavihr/',
+  instagram: 'https://www.instagram.com/freshgradprep',
 };

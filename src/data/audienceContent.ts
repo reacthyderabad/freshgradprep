@@ -4,27 +4,22 @@ export const audienceContent = {
     {
       title: 'Students',
       description:
-        'Preparing for campus placements and looking for a competitive edge with recruiter-backed strategies.',
+        'Students preparing for placements',
     },
     {
       title: 'Fresh Graduates',
       description:
-        'Entering the job market for the first time and need clarity on how hiring actually works.',
+        'Fresh graduates entering the job market',
     },
     {
       title: 'Early Professionals',
       description:
-        'Feeling stuck or directionless in your first few years and looking for career momentum.',
+        'Early professionals feeling stuck or directionless',
     },
     {
       title: 'Experienced Professionals',
       description:
-        'Seeking clarity and strategic positioning for your next career move or transition.',
-    },
-    {
-      title: 'Job Seekers',
-      description:
-        'Anyone confused about low job responses, weak positioning, or unclear career paths.',
-    },
+        'Experienced individuals seeking clarity in their next move',
+    }
   ],
 };

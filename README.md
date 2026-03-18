@@ -9,17 +9,6 @@
   A career clarity platform designed to help individuals navigate the job market with strategy and clarity.
 </p>
 
-<!-- <p align="center">
-
-🌐 <a href="https://reacthyderabad.com">Website</a> •  
-💼 <a href="https://linkedin.com/company/reacthyderabad">LinkedIn</a> •  
-🐦 <a href="https://twitter.com/reacthyderabad">Twitter</a> •  
-📸 <a href="https://instagram.com/reacthyderabad">Instagram</a> •  
-📺 <a href="https://youtube.com/@reacthyderabad">YouTube</a> •  
-💬 <a href="https://chat.whatsapp.com/dummy">WhatsApp Community</a>
-
-</p> -->
-
 <br />
 
 # 🧭 About FreshGradPrep
@@ -76,6 +65,18 @@ FreshGradPrep represents the **first step of this initiative**, where contributo
 
 <br />
 
+# 👥 Core Team
+
+
+| Name | Role | Contribution Area | LinkedIn |
+|-----|-----|-----|-----|
+| **Shlok Srivastava** | Project Lead & Architect | Project architecture, technical direction, repository setup, maintainership | [shloksri](https://www.linkedin.com/in/shloksri/) |
+| **Samhita Vetcha** | Maintainer & Core Collaborator | Code reviews, issue management, contributor guidance, project coordination | [samhita-vetcha](https://www.linkedin.com/in/samhita-vetcha/) |
+| **Sripali Deb** | Product Team | UX review, product feedback, feature clarity | [sripalideb](https://www.linkedin.com/in/sripalideb/) |
+| **Manikanta Sriram** | Design Team | UI design, visual direction, design system support | [manekanttasriram](https://www.linkedin.com/in/manekanttasriram/) |
+
+<br />
+
 # 🤝 Contributing
 
 FreshGradPrep is built through the **Forge contributor ecosystem**.
@@ -108,8 +109,6 @@ React Hyderabad is a community focused on learning, collaboration, and building 
   <a href="https://youtube.com/@reacthyderabad">YouTube</a> •
   <a href="https://chat.whatsapp.com/EUSnisT0d27L3tKVFbJEU8">WhatsApp Community</a>
 </p>
-
-
 
 # 📜 License
 

@@ -5,6 +5,7 @@ export const navbarContent = {
     { label: 'Services', href: '#services' },
     { label: 'Testimonials', href: '#testimonials' },
     { label: 'Founder', href: '#founder' },
+    { label: 'Events', href: '#events' },
   ],
   ctaLabel: 'Book Session',
   ctaHref: '#booking',

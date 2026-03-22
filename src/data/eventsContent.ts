@@ -20,10 +20,10 @@ export const eventsContent: EventsContent = {
     {
       name: 'How Hiring Actually Works (From the Other Side of the Table)',
       date: '5th Apr, 2026',
-      timings: 'TBA',
+      timings: '4:00 PM - 6:00 PM',
       mode: 'Offline',
       venue: 'TBA',
-      registrationOpen: false,
+      registrationOpen: true,
       registrationLink:
         'https://www.goavo.ai/events/forms/fillup?id=69b2b0b44c6ae6af444e13d6',
       registrationLabel: 'RSVP Open',

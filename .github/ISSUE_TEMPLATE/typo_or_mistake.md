@@ -1,5 +1,5 @@
 ---
-name: Typo or mistake
+name: ✏️ Typo or mistake
 about: Report a typo, incorrect information, or factual mistake
 title: ''
 labels: 'typo'

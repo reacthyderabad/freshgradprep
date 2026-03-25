@@ -1,5 +1,5 @@
 ---
-name: Suggestion
+name: 💡 Suggestion
 about: Share a suggestion to improve FreshGradPrep
 title: ''
 labels: 'suggestion'

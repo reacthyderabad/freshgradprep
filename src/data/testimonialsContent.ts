@@ -6,7 +6,7 @@ export const testimonialsContent = {
       designation: '10+ Years of Experience',
       content:[
         'I\'m truly grateful to Bhargavi for the way she guided me through my job search journey. She patiently listened to all my concerns about my current role and helped me gain much-needed clarity. What stood out was her ability to understand my situation without judgment and offer practical advice.',
-        'She also walked me through how to effectively use LinkedIn, build my visibility, and apply strategically — not just randomly. Thanks to her support, I feel more confident and focused on landing the right job that aligns with my goals.',
+        'She also walked me through how to effectively use LinkedIn, build my visibility, and apply strategically - not just randomly. Thanks to her support, I feel more confident and focused on landing the right job that aligns with my goals.',
         'If you\'re someone who feels stuck in your career or unsure about the next step, I highly recommend Bhargavi. Her approach is empowering, empathetic, and action-driven.'
       ],
     },
@@ -39,7 +39,7 @@ export const testimonialsContent = {
       content:[
         'I recently had a 1:1 career coaching session with Bhargavi Madam, and I must say it was absolutely worth it. She has a real HR perspective that freshers and young professionals often miss out on.',
         'What I really appreciated was how she cleared doubts I didn\'t even realize were holding me back, but turned out to be the most important in my career journey. From resume & LinkedIn optimization to job search strategies across platforms like LinkedIn and Naukri, she broke it down step by step in a way that was practical and actionable.',
-        'She even highlighted the job scams and misleading opportunities circulating on platforms, which was a real eye-opener. Her advice was not just theoretical—it was based on solid HR experience and tailored to my profile.',
+        'She even highlighted the job scams and misleading opportunities circulating on platforms, which was a real eye-opener. Her advice was not just theoretical-it was based on solid HR experience and tailored to my profile.',
         'If you\'re a fresher or someone looking for clarity in your career path, I\'d highly recommend reaching out to her for guidance. It\'s one of the most value-for-money career investments I\'ve made.'
       ]
     },

@@ -7,7 +7,7 @@ export const aboutContent = {
   ],
   highlights: [
     'Real HR insights from actual hiring experience',
-    'Practical guidance — not theory or templates',
+    'Practical guidance - not theory or templates',
     'Structured career clarity for every stage',
   ],
 };

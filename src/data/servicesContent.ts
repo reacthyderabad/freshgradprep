@@ -75,7 +75,7 @@ export const servicesContent = {
         },
       ],
       footer:
-        'Designed for students who want structured preparation — not last-minute panic.',
+        'Designed for students who want structured preparation - not last-minute panic.',
       ctaLabel: 'Book Now',
       ctaHref: '#booking',
     },

@@ -8,7 +8,7 @@
  * Rules:
  *  - One exported const per file
  *  - File name matches the export name (sampleData.ts → sampleData)
- *  - No JSX, no MUI imports, no styling — just plain data
+ *  - No JSX, no MUI imports, no styling - just plain data
  *  - Use an interface for repeated/complex items
  *  - camelCase for the file name and export name
  */

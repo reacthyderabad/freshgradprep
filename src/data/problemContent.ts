@@ -14,7 +14,7 @@ export const problemContent = {
     {
       title: 'LinkedIn Confusion',
       description:
-        'LinkedIn visibility feels unclear — not sure what works and what doesn\'t.',
+        'LinkedIn visibility feels unclear - not sure what works and what doesn\'t.',
     },
     {
       title: 'Interview Anxiety',

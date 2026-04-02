@@ -1,7 +1,7 @@
-import { Box, Typography, Button, Stack } from '@mui/material';
+import { Box, Typography, Button, Stack, Link } from '@mui/material';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import WifiOffIcon from '@mui/icons-material/WifiOff';
+// import WifiOffIcon from '@mui/icons-material/WifiOff';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { eventsContent } from '../data/eventsContent';
 
@@ -62,18 +62,31 @@ const EventsSection = () => {
               </Typography>
             </Stack>
 
-            <Stack direction="row" spacing={1} alignItems="center">
+            {/* <Stack direction="row" spacing={1} alignItems="center">
               <WifiOffIcon sx={{ color: 'accent.main', fontSize: 18 }} />
               <Typography variant="body2" color="text.secondary">
                 {event.mode}
               </Typography>
-            </Stack>
+            </Stack> */}
 
             <Stack direction="row" spacing={1} alignItems="center">
               <LocationOnIcon sx={{ color: 'accent.main', fontSize: 18 }} />
-              <Typography variant="body2" color="text.secondary">
-                {event.venue}
-              </Typography>
+              {event.venueUrl ? (
+                <Link
+                  href={event.venueUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="body2"
+                  color="text.secondary"
+                  underline="always"
+                >
+                  {event.venue}
+                </Link>
+              ) : (
+                <Typography variant="body2" color="text.secondary">
+                  {event.venue}
+                </Typography>
+              )}
             </Stack>
           </Stack>
 

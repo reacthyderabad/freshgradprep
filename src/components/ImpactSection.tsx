@@ -2,6 +2,7 @@
 import { Box, Typography, Container } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { impactContent } from "../data/impactContent";
+import AnimatedCounter from "./AnimatedCounter";
 
 const ImpactSection = () => {
   return (
@@ -38,9 +39,9 @@ const ImpactSection = () => {
                     color: "accent.main",
                     lineHeight: 1.1,
                   }}
-                >
-                  {item.value}
-                </Typography>
+>
+                   <AnimatedCounter value={item.value} />
+                   </Typography>
 
                 {/* Label */}
                 <Typography

@@ -182,8 +182,8 @@ export const servicesContent = {
       title: 'Campus2Corporate Pro',
       description:
         'Campus2Corporate Pro programs can be delivered in flexible formats based on institutional needs:',
-      duration: 'Contact for Details',
-      price: 'Contact for Pricing',
+      duration: 'Contact us for Details',
+      price: 'Contact us for Pricing',
       highlights: [
         {
           label: 'All sessions can be customized based on:',

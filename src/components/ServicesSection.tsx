@@ -21,26 +21,9 @@ import {
 import CloseIcon from '@mui/icons-material/Close';
 import { servicesContent } from '../data/servicesContent';
 
-const INITIAL_VISIBLE = 2;
-const STEP = 2;
-
 const ServicesSection = () => {
-  const totalServices = servicesContent.services.length;
-  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
   const [selectedService, setSelectedService] = useState<typeof servicesContent.services[0] | null>(null);
   const activeService = selectedService;
-
-  const visibleServices = servicesContent.services.slice(0, visibleCount);
-  const allVisible = visibleCount >= totalServices;
-
-  const handleToggle = () => {
-    if (allVisible) {
-      setVisibleCount(INITIAL_VISIBLE);
-      document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      setVisibleCount((prev) => Math.min(prev + STEP, totalServices));
-    }
-  };
 
   return (
     <Box
@@ -78,8 +61,8 @@ const ServicesSection = () => {
         </Typography>
 
         <Grid container spacing={3}>
-          {visibleServices.map((service) => (
-            <Grid key={service.title} size={{ xs: 12, sm: 6, md: 6 }}>
+          {servicesContent.services.map((service) => (
+            <Grid key={service.title} size={{ xs: 12, sm: 6, md: 4 }}>
               <Card
                 sx={{
                   height: '100%',
@@ -190,13 +173,7 @@ const ServicesSection = () => {
           ))}
         </Grid>
 
-        {totalServices > INITIAL_VISIBLE && (
-          <Box sx={{ textAlign: 'center', mt: 4 }}>
-            <Button variant="text" color="primary" onClick={handleToggle}>
-              {allVisible ? 'Show Less' : 'View More'}
-            </Button>
-          </Box>
-        )}
+
 
         <Dialog
           open={Boolean(activeService)}

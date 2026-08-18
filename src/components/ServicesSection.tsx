@@ -12,27 +12,18 @@ import {
   List,
   ListItem,
   ListItemText,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  IconButton,
 } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import { servicesContent } from '../data/servicesContent';
 
-const INITIAL_VISIBLE = 2;
-const STEP = 2;
-
 const ServicesSection = () => {
-  const totalServices = servicesContent.services.length;
-  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
-
-  const visibleServices = servicesContent.services.slice(0, visibleCount);
-  const allVisible = visibleCount >= totalServices;
-
-  const handleToggle = () => {
-    if (allVisible) {
-      setVisibleCount(INITIAL_VISIBLE);
-      document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      setVisibleCount((prev) => Math.min(prev + STEP, totalServices));
-    }
-  };
+  const [selectedService, setSelectedService] = useState<typeof servicesContent.services[0] | null>(null);
+  const activeService = selectedService;
 
   return (
     <Box
@@ -70,8 +61,8 @@ const ServicesSection = () => {
         </Typography>
 
         <Grid container spacing={3}>
-          {visibleServices.map((service) => (
-            <Grid key={service.title} size={{ xs: 12, sm: 6, md: 6 }}>
+          {servicesContent.services.map((service) => (
+            <Grid key={service.title} size={{ xs: 12, sm: 6, md: 4 }}>
               <Card
                 sx={{
                   height: '100%',
@@ -112,63 +103,6 @@ const ServicesSection = () => {
                   >
                     {service.description}
                   </Typography>
-
-                  {service.subSections && service.subSections.length > 0 && (
-                    <Box sx={{ mb: 2 }}>
-                      {service.subSections.map((sub) => (
-                        <Box key={sub.title} sx={{ mb: 1.5 }}>
-                          <Typography
-                            variant="subtitle2"
-                            sx={{ fontWeight: 700, color: 'text.primary' }}
-                          >
-                            {sub.title}
-                          </Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                            {sub.description}
-                          </Typography>
-                        </Box>
-                      ))}
-                    </Box>
-                  )}
-
-                  {service.highlights.map((section) => (
-                    <Box key={section.label} sx={{ mb: 1.5 }}>
-                      <Typography
-                        variant="subtitle2"
-                        sx={{ fontWeight: 700, color: 'text.primary' }}
-                      >
-                        {section.label}
-                      </Typography>
-                      <List dense disablePadding sx={{ pl: 1 }}>
-                        {section.items.map((item) => (
-                          <ListItem key={item} disableGutters sx={{ py: 0.25 }}>
-                            <ListItemText
-                              primary={`• ${item}`}
-                              primaryTypographyProps={{
-                                variant: 'body2',
-                                color: 'text.secondary',
-                              }}
-                            />
-                          </ListItem>
-                        ))}
-                      </List>
-                    </Box>
-                  ))}
-
-                  {service.footer && (
-                    <Typography
-                      variant="caption"
-                      sx={{
-                        color: 'text.secondary',
-                        fontStyle: 'italic',
-                        display: 'block',
-                        mb: 2,
-                        whiteSpace: 'pre-line',
-                      }}
-                    >
-                      {service.footer}
-                    </Typography>
-                  )}
 
                   <Stack
                     direction="row"
@@ -223,14 +157,14 @@ const ServicesSection = () => {
                     </Box>
                     <Button
                       variant="contained"
-                      href={service.ctaHref}
+                      onClick={() => setSelectedService(service)}
                       sx={{
                         whiteSpace: 'nowrap',
                         backgroundColor: 'highlight.main',
                         '&:hover': { backgroundColor: 'highlight.dark', opacity: 0.9 },
                       }}
                     >
-                      {service.ctaLabel}
+                      View More
                     </Button>
                   </Stack>
                 </CardContent>
@@ -239,13 +173,177 @@ const ServicesSection = () => {
           ))}
         </Grid>
 
-        {totalServices > INITIAL_VISIBLE && (
-          <Box sx={{ textAlign: 'center', mt: 4 }}>
-            <Button variant="text" color="primary" onClick={handleToggle}>
-              {allVisible ? 'Show Less' : 'View More'}
-            </Button>
-          </Box>
-        )}
+
+
+        <Dialog
+          open={Boolean(activeService)}
+          onClose={() => setSelectedService(null)}
+          fullWidth
+          maxWidth="sm"
+          aria-labelledby="service-dialog-title"
+          sx={{
+            '& .MuiDialog-paper': {
+              borderRadius: 2,
+              p: 1,
+            },
+          }}
+        >
+          {activeService && (
+            <>
+              <DialogTitle id="service-dialog-title" sx={{ m: 0, p: 2, pr: 6, position: 'relative' }}>
+                <Typography variant="h5" component="div" sx={{ color: 'primary.main', fontWeight: 700 }}>
+                  {activeService.title}
+                </Typography>
+                <IconButton
+                  aria-label="close"
+                  onClick={() => setSelectedService(null)}
+                  sx={{
+                    position: 'absolute',
+                    right: 12,
+                    top: 12,
+                    color: 'text.secondary',
+                  }}
+                >
+                  <CloseIcon />
+                </IconButton>
+              </DialogTitle>
+
+              <DialogContent sx={{ p: 2, pt: 0 }}>
+                <Stack direction="row" spacing={1} sx={{ mb: 2 }} flexWrap="wrap" useFlexGap>
+                  <Chip
+                    label={activeService.duration}
+                    size="small"
+                    sx={{
+                      backgroundColor: 'accent.light',
+                      color: 'accent.main',
+                      fontWeight: 600,
+                      fontSize: '0.75rem',
+                    }}
+                  />
+                </Stack>
+
+                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3 }}>
+                  {activeService.description}
+                </Typography>
+
+                {activeService.subSections && activeService.subSections.length > 0 && (
+                  <Box sx={{ mb: 3 }}>
+                    {activeService.subSections.map((sub) => (
+                      <Box key={sub.title} sx={{ mb: 2 }}>
+                        <Typography
+                          variant="subtitle2"
+                          sx={{ fontWeight: 700, color: 'text.primary', mb: 0.5 }}
+                        >
+                          {sub.title}
+                        </Typography>
+                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                          {sub.description}
+                        </Typography>
+                      </Box>
+                    ))}
+                  </Box>
+                )}
+
+                {activeService.highlights && activeService.highlights.map((section) => (
+                  <Box key={section.label} sx={{ mb: 2 }}>
+                    <Typography
+                      variant="subtitle2"
+                      sx={{ fontWeight: 700, color: 'text.primary', mb: 1 }}
+                    >
+                      {section.label}
+                    </Typography>
+                    <List dense disablePadding sx={{ pl: 1 }}>
+                      {section.items.map((item) => (
+                        <ListItem key={item} disableGutters sx={{ py: 0.25 }}>
+                          <ListItemText
+                            primary={`• ${item}`}
+                            primaryTypographyProps={{
+                              variant: 'body2',
+                              color: 'text.secondary',
+                            }}
+                          />
+                        </ListItem>
+                      ))}
+                    </List>
+                  </Box>
+                ))}
+
+                {activeService.footer && (
+                  <Typography
+                    variant="caption"
+                    sx={{
+                      color: 'text.secondary',
+                      fontStyle: 'italic',
+                      display: 'block',
+                      mt: 2,
+                      whiteSpace: 'pre-line',
+                    }}
+                  >
+                    {activeService.footer}
+                  </Typography>
+                )}
+              </DialogContent>
+
+              <DialogActions sx={{ p: 2, pt: 1, justifyContent: 'space-between', alignItems: 'center' }}>
+                <Box>
+                  {activeService.originalPrice ? (
+                    <>
+                      <Stack direction="row" spacing={1} alignItems="center">
+                        <Typography
+                          variant="body1"
+                          sx={{
+                            color: 'text.disabled',
+                            textDecoration: 'line-through',
+                            fontWeight: 500,
+                          }}
+                        >
+                          {activeService.originalPrice}
+                        </Typography>
+                        <Typography
+                          variant="h5"
+                          sx={{ color: 'primary.main', fontWeight: 700 }}
+                        >
+                          {activeService.price}
+                        </Typography>
+                      </Stack>
+                      {activeService.offerLabel && (
+                        <Chip
+                          label={activeService.offerLabel}
+                          size="small"
+                          color="success"
+                          sx={{ mt: 0.5, fontWeight: 600, fontSize: '0.7rem' }}
+                        />
+                      )}
+                    </>
+                  ) : (
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        color: 'primary.main',
+                        fontWeight: 700,
+                      }}
+                    >
+                      {activeService.price}
+                    </Typography>
+                  )}
+                </Box>
+                <Button
+                  variant="contained"
+                  href={activeService.ctaHref}
+                  onClick={() => setSelectedService(null)}
+                  sx={{
+                    whiteSpace: 'nowrap',
+                    backgroundColor: 'highlight.main',
+                    '&:hover': { backgroundColor: 'highlight.dark', opacity: 0.9 },
+                    borderRadius: 2,
+                  }}
+                >
+                  {activeService.ctaLabel}
+                </Button>
+              </DialogActions>
+            </>
+          )}
+        </Dialog>
       </Container>
     </Box>
   );

@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
+import { Box, Typography, Container, Card, CardContent } from "@mui/material";
 
 import SchoolIcon from "@mui/icons-material/School";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
@@ -18,98 +18,106 @@ const icons: SvgIconComponent[] = [
 
 export default function AudienceSection() {
   return (
-    <Box sx={{ py: 10, backgroundColor: "secondary.main" }}>
-      {/* Heading */}
-      <Typography
-        align="center"
-        sx={{
-          fontSize: "30px",
-          fontWeight: 700,
-          color: "primary.main",
-          mb: 7,
-        }}
-      >
-        {audienceContent.title}
-      </Typography>
+    <Box
+      component="section"
+      aria-label="Who FreshGradPrep is designed for"
+      sx={{
+        py: { xs: 8, md: 10 },
+        backgroundColor: "secondary.main",
+      }}
+    >
+      <Container>
+        <Typography
+          variant="h2"
+          sx={{
+            textAlign: "center",
+            color: "primary.main",
+            mb: 2,
+            fontSize: { xs: "1.75rem", md: "2.25rem" },
+          }}
+        >
+          {audienceContent.title}
+        </Typography>
 
-      {/* Cards */}
-      <Grid
-        container
-        spacing={4}
-        justifyContent="center"
-        sx={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
-        {audienceContent.cards.map((item, index) => {
-          const IconComponent = icons[index];
-          return (
-            <Grid
-              key={index}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
+        <Box
+          sx={{
+            mt: 5,
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "1fr",
+              sm: "1fr 1fr",
+              md: "1fr 1fr 1fr 1fr",
+            },
+            gap: 4,
+          }}
+        >
+          {audienceContent.cards.map((item, index) => {
+            const IconComponent = icons[index];
+            return (
               <Card
+                key={index}
                 sx={{
-                  width: 360,
-                  borderRadius: "22px",
-                  textAlign: "center",
-                  p: 4,
+                  height: "100%",
                   backgroundColor: "background.paper",
-                  boxShadow: "0 10px 22px rgba(0,0,0,0.08)",
+                  border: "1px solid",
+                  borderColor: "divider",
                 }}
               >
-                <CardContent sx={{ p: 0 }}>
-                  {/* Icon */}
+                <CardContent
+                  sx={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    textAlign: "center",
+                    px: 3,
+                    py: 3,
+                  }}
+                >
                   <Box
                     sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                       width: 56,
                       height: 56,
                       borderRadius: 2,
                       backgroundColor: "accent.light",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      mx: "auto",
-                      mb: 2.5,
+                      mb: 1.5,
                     }}
                   >
-                    <IconComponent
-                      sx={{ fontSize: 28, color: "accent.main" }}
-                    />
+                    <IconComponent sx={{ fontSize: 36, color: "accent.main" }} />
                   </Box>
 
-                  {/* Title */}
                   <Typography
+                    variant="h6"
                     sx={{
-                      fontWeight: 600,
                       color: "primary.main",
-                      fontSize: "20px",
                       mb: 1,
+                      textAlign: "center",
                     }}
                   >
                     {item.title}
                   </Typography>
 
-                  {/* Description */}
                   <Typography
+                    variant="body2"
                     sx={{
-                      fontSize: "14px",
                       color: "text.secondary",
-                      lineHeight: 1.6,
+                      textAlign: "center",
+                      maxWidth: 240,
+                      mx: "auto",
                     }}
                   >
                     {item.description}
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid>
-          );
-        })}
-      </Grid>
+            );
+          })}
+        </Box>
+      </Container>
     </Box>
   );
 }

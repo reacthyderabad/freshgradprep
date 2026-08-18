@@ -74,7 +74,7 @@ FreshGradPrep represents the **first step of this initiative**, where contributo
 | **Samhita Vetcha** | Maintainer & Core Collaborator | Code reviews, issue management, contributor guidance, project coordination | [samhita-vetcha](https://www.linkedin.com/in/samhita-vetcha/) |
 | **Sripali Deb** | Product Team | UX review, product feedback, feature clarity | [sripalideb](https://www.linkedin.com/in/sripalideb/) |
 | **Manikanta Sriram** | Design Team | UI design, visual direction, design system support | [manekanttasriram](https://www.linkedin.com/in/manekanttasriram/) |
-
+|**Dilip Kumar** | Maintainer & Core Collaborator | Code reviews, issue management, contributor guidance, project coordination | [Dilip Kumar](https://www.linkedin.com/in/dilip-kashyap/) |
 <br />
 
 # 🤝 Contributing
@@ -85,7 +85,7 @@ Contributors collaborate through a structured workflow that helps them understan
 
 If you are interested in contributing:
 
-1. Fork the repository and copy both the branches.
+1. Fork the repository and copy both the branches and make sure you have unchecked **Copy the main branch only**.
 2. Create a new branch **only from the `dev` branch**.
 3. Make your changes  
 4. Submit a Pull Request  

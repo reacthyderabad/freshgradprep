@@ -4,61 +4,63 @@ export const testimonialsContent = {
     {
       name: 'Swathi',
       designation: '10+ Years of Experience',
-      content:[
-        'I\'m truly grateful to Bhargavi for the way she guided me through my job search journey. She patiently listened to all my concerns about my current role and helped me gain much-needed clarity. What stood out was her ability to understand my situation without judgment and offer practical advice.',
-        'She also walked me through how to effectively use LinkedIn, build my visibility, and apply strategically - not just randomly. Thanks to her support, I feel more confident and focused on landing the right job that aligns with my goals.',
-        'If you\'re someone who feels stuck in your career or unsure about the next step, I highly recommend Bhargavi. Her approach is empowering, empathetic, and action-driven.'
+      content: [
+        'I’m really thankful to Bhargavi for helping me with my job search. She listened to my concerns and helped me understand my situation better. I really liked how calm and practical she was. Her advice was simple and actually made sense for my career.',
+        'She also helped me understand how to use LinkedIn better, improve my visibility, and apply for jobs more effectively instead of just applying everywhere. After speaking with her, I feel more confident and clear about what I should do next.',
+        'If you’re feeling stuck or confused about your career, I’d definitely recommend talking to Bhargavi. She is supportive, genuine, and gives practical advice.'
       ],
     },
     {
       name: 'Harshitha',
       designation: '2 Years of Experience',
-      content:[
-        'I had a great experience speaking with Bhargavi . She genuinely understood my skills and past experience, guiding me through in-demand technologies and future career trends. Her insights helped me make informed decisions about my next steps.',
-        'She also provided valuable advice on job applications, LinkedIn optimization, networking, and avoiding job scams. Her friendly and patient approach made the conversation feel like chatting with a trusted friend.',
-        'With her expertise and willingness to help without expecting hefty fees, I highly recommend reaching out to her for career guidance. She truly cares about giving back to the community and setting people on the right path.'
+      content: [
+        'I had a really good experience talking to Bhargavi. She understood my skills and background and helped me figure out which technologies are in demand and where things are heading. Her advice gave me a much better idea of what I should focus on next.',
+        'She also shared useful tips on job applications, LinkedIn, networking, and how to stay away from scams. She was very friendly and patient, and the conversation felt comfortable rather than like a formal session.',
+        'I’d definitely recommend talking to her if you need career guidance. She genuinely wants to help and gives practical advice without making things complicated.'
       ],
     },
     {
       name: 'Manas',
       designation: '2025 Graduate',
-      content:[
-        'I recently registered for a session with HR Bhargavi ma\'am, and it was truly insightful. She provided me with valuable guidance on resume preparation, highlighting the changes that need to be made to enhance its effectiveness. She also shared important tips on maintaining a professional LinkedIn profile, the modifications required for better visibility, and how to effectively apply for and filter relevant job opportunities on LinkedIn. I am grateful for the clarity and direction the session has given me in shaping my professional journey.'
+      content: [
+        'I recently attended a session with HR Bhargavi ma’am, and it was really helpful. She gave me some good advice on improving my resume and explained what I could change to make it stronger. She also helped me understand how to keep my LinkedIn profile professional, improve my visibility, and find relevant jobs.',
+        'I’m really thankful for the clarity she gave me. I now have a better idea of what I need to work on and how I can move forward with my career.'
       ],
     },
     {
       name: 'Anupol',
-      designation: 'Final Year student',
-      content:[
-        'Bhargavi ma\'am was very helpful for me. She as a HR provided me with some great valuable insights which was definitely hampering me a lot during applications for jobs/internships. And her approach of telling the absolute facts, not sugarcoating is the best approach for any freshers out there. I would highly recommend every fresher to attend a session with her. Highly grateful to her.',
+      designation: 'Final Year Student',
+      content: [
+        'Bhargavi ma’am was really helpful to me. As an HR, she shared some valuable insights that helped me with my internship and job applications. Her advice was honest and straightforward, which I think is really useful for freshers.',
+        'I’d definitely recommend every fresher to attend one of her sessions. I’m really thankful for her guidance.'
       ]
     },
     {
       name: 'Raj',
       designation: 'MBA Graduate',
-      content:[
-        'I recently had a 1:1 career coaching session with Bhargavi Madam, and I must say it was absolutely worth it. She has a real HR perspective that freshers and young professionals often miss out on.',
-        'What I really appreciated was how she cleared doubts I didn\'t even realize were holding me back, but turned out to be the most important in my career journey. From resume & LinkedIn optimization to job search strategies across platforms like LinkedIn and Naukri, she broke it down step by step in a way that was practical and actionable.',
-        'She even highlighted the job scams and misleading opportunities circulating on platforms, which was a real eye-opener. Her advice was not just theoretical-it was based on solid HR experience and tailored to my profile.',
-        'If you\'re a fresher or someone looking for clarity in your career path, I\'d highly recommend reaching out to her for guidance. It\'s one of the most value-for-money career investments I\'ve made.'
+      content: [
+        'I recently had a 1:1 career coaching session with Bhargavi ma’am, and it was really helpful. Since she has an HR background, she gave me a perspective that I don’t usually get to hear.',
+        'She cleared a lot of doubts I had about resumes, LinkedIn, job searching, and how to apply on platforms like LinkedIn and Naukri. She explained everything in a very practical way.',
+        'She also pointed out some common scams and fake job opportunities, which I found really useful. Her advice was based on real HR experience and was relevant to my profile.',
+        'If you’re a fresher or feel confused about your career, I’d definitely recommend talking to her. It was a very useful session for me.'
       ]
     },
     {
       name: 'Bharathi',
       designation: 'Second Year Student',
-      content:[
-        'A big thank you to Bhargavi M mam for delivering such a wonderful and informative session. Ma\'am shared valuable insights on resume building and common mistakes freshers make, how HRs evaluate resumes, linkedIn profile optimization and best practices, awareness about LinkedIn scams and fake opportunities, internship guidance and career preparation from an HR perspective',
-        'The session was extremely helpful, practical, and eye-opening for all the participants. We gained a lot of clarity, confidence, and direction for our future careers. The knowledge and guidance shared during the session will definitely help us in our career journey.'
+      content: [
+        'A big thank you to Bhargavi ma’am for such a helpful session. She shared a lot of useful information about resumes, common mistakes freshers make, how HRs look at resumes, LinkedIn, scam awareness, internships, and career planning.',
+        'The session was very practical and gave us a lot more clarity about what we should focus on. I’m sure the things she shared will be useful for us as we start building our careers.'
       ],
     },
     {
       name: 'Mohneesh',
-      designation: 'Founder - Knowvy Technologies ',
-      content:[
-        'HR Interaction Session - Real Insights, Real Learning! Yesterday, I had the opportunity to organize an HR Interaction Session with Bhargavi M ma\'am on Google Meet, and it turned out to be an incredibly interactive and insightful experience for everyone who joined!',
-        'We discussed some of the most real and practical aspects of job hunting and career building - things every student and fresher needs to know how to find and apply for genuine job opportunities on LinkedIn, The right way to approach HR professionals and recruiters,Essential skills freshers must develop to stand out in today\'s competitive job market,How to maintain a professional network and use LinkedIn effectively to grow your career.',
-        'What made this session truly special was the honest and unfiltered discussion about the current job market reality - the importance of being authentic, knowing your fundamentals, and being a responsive candidate who adds value.',
-        'I\'m truly grateful to Bhargavi Ma\'am on behalf of Knowvy Technologies, for sharing her valuable insights and experiences, and to all the amazing participants who made the session engaging with their questions.'
+      designation: 'Founder - Knowvy Technologies',
+      content: [
+        'I recently had the opportunity to organize an HR interaction session with Bhargavi ma’am on Google Meet, and it was a really useful session for everyone who joined.',
+        'We talked about the practical side of job hunting and career building, like finding genuine opportunities on LinkedIn, approaching HRs and recruiters, what skills freshers should focus on, and how to build a useful professional network.',
+        'I really liked how openly we discussed the current job market and the things candidates should keep in mind. We talked about being genuine, getting the basics right, being responsive, and showing that you can add value.',
+        'I’m really thankful to Bhargavi ma’am for taking the time to share her experience and answer everyone’s questions.'
       ],
     },
   ],

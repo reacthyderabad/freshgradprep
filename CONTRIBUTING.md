@@ -10,7 +10,10 @@ This project is built through **React Hyderabad Forge**, where contributors coll
 
 1. Fork the repository and copy both the branches.
 
-2. Clone your fork
+2. While forking make sure **Copy the main branch only** should be unchecked.
+<img width="1578" height="392" alt="image" src="https://github.com/user-attachments/assets/bc8805d5-f94b-4aec-8c0a-d6931d7489b3" />
+
+3. Clone your fork
 
 > git clone https://github.com/yourusername/freshgradprep.git
 

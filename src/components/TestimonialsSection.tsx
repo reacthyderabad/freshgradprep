@@ -111,7 +111,7 @@ const TestimonialsSection = () => {
 
         <Typography
           variant="body2"
-          sx={{ color: 'accent.main' }}
+          sx={{ color: 'primary.main' }}
         >
           {activeTestimonial.designation}
         </Typography>

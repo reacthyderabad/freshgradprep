@@ -8,7 +8,7 @@ interface ColorTheme {
 export const freshgradTheme1: ColorTheme = {
   primary: '#043a7e',
   secondary: '#e8e3cc',
-  accent: '#d7a449',
+  accent: '#664801',
   highlight: '#db3f29',
 };
 

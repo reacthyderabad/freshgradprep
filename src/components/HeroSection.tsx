@@ -57,7 +57,7 @@ const HeroSection = () => {
             <Typography
               variant="body2"
               sx={{
-                color: 'accent.main',
+                color: 'primary.main',
                 fontWeight: 600,
                 mb: 4,
               }}

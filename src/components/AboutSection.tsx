@@ -41,10 +41,14 @@ const AboutSection = () => {
               </Typography>
 
               {aboutContent.highlights.map((item, index) => (
-                <Box key={index} sx={{ display: "flex", mb: 1.5 }}>
-                  <CheckCircleOutlineIcon sx={{ mr: 1 , color: '#d7a449' }} />
-                  <Typography>{item}</Typography>
-                </Box>
+                <Typography
+                  key={index}
+                  component="div"
+                  sx={{ display: "flex", mb: 1.5 }}
+                >
+                  <CheckCircleOutlineIcon sx={{ mr: 1, mt: 0.25, color: '#d7a449' }} />
+                  {item}
+                </Typography>
               ))}
             </Box>
           </Grid>

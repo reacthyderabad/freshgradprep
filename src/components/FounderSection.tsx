@@ -50,7 +50,7 @@ const FounderSection = () => {
               sx={{
                 width: { xs: 200, md: 280 },
                 height: { xs: 200, md: 280 },
-                borderRadius: '50%',
+                borderRadius: '20%',
                 border: '4px solid',
                 borderColor: 'accent.main',
                 boxShadow: '0 8px 24px rgba(0,0,0,0.08)',

@@ -60,7 +60,7 @@ const Navbar = () => {
                 component="img"
                 src={fgpLogo}
                 alt="FreshGradPrep"
-                sx={{ height: { xs: 36, md: 42 }, width: 'auto' }}
+                sx={{ height: { xs: 43, md: 50 }, width: 'auto' }}
               />
               <Typography
                 variant="h6"

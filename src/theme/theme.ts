@@ -59,8 +59,8 @@ export const createAppTheme = (colors: ColorTheme): Theme =>
         paper: '#ffffff',
       },
       text: {
-        primary: '#1a1a2e',
-        secondary: '#4a4a68',
+        primary: '#1F1F1F',
+        secondary: '#3D3D3D',
       },
       divider: alpha(colors.primary, 0.1),
     },

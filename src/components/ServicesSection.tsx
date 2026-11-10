@@ -90,7 +90,7 @@ const ServicesSection = () => {
                       size="small"
                       sx={{
                         backgroundColor: 'accent.light',
-                        color: 'accent.main',
+                        color: 'primary.main',
                         fontWeight: 600,
                         fontSize: '0.75rem',
                       }}

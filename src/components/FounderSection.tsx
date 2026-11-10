@@ -97,7 +97,7 @@ const FounderSection = () => {
             </Typography>
             <Typography
               variant="subtitle2"
-              sx={{ color: 'accent.main', fontWeight: 600, mb: 3 }}
+              sx={{ color: 'primary.main', fontWeight: 600, mb: 3 }}
             >
               {founderContent.role}
             </Typography>
